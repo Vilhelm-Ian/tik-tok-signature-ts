@@ -1,2 +1,7 @@
 "use strict";
-console.log("hello");
+function New_Signer(userAgent, url) {
+    return {
+        userAgent,
+        url,
+    };
+}
