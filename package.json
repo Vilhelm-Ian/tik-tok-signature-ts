@@ -12,7 +12,11 @@
     "type": "git",
     "url": "git+https://github.com/Vilhelm-Ian/tik-tok-signature-ts.git"
   },
-  "keywords": ["tik-tok", "scrapping", "typescript"],
+  "keywords": [
+    "tik-tok",
+    "scrapping",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -20,7 +24,8 @@
   },
   "homepage": "https://github.com/Vilhelm-Ian/tik-tok-signature-ts#readme",
   "dependencies": {
-    "jest": "^28.1.3"
+    "jest": "^28.1.3",
+    "playwright-chromium": "^1.24.2"
   },
   "devDependencies": {
     "@types/jest": "^28.1.6",
