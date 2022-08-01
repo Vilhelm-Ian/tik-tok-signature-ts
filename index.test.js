@@ -1,3 +1,8 @@
-it("is jest working", () => {
-  expect("2+2").toBe(5);
+import { New_Signer } from "./index.js";
+
+it("is browser intilaizing", () => {
+  let signer = New_Signer();
+  signer.init().then(() => {
+    expect(signer.browser !== undefined).toBe(true);
+  });
 });

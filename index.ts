@@ -1,4 +1,4 @@
-import { devices, chromium } from "playwright-chromium";
+import { devices, chromium, Browser } from "playwright-chromium";
 
 interface Options {
 	args: string[];
@@ -8,23 +8,24 @@ interface Options {
 
 interface Signer {
 	userAgent: string;
-	args: string[];
-	options: Options;
+	args?: string[];
+	options?: Options;
 	url: string;
-	browser?: unknown;
-	isExternalBrowser: boolean;
-	context: unknown;
-	page: unknown;
+	browser?: Browser;
+	isExternalBrowser?: boolean;
+	context?: unknown;
+	page?: unknown;
+	init(): Promise<void>;
 }
 
-function New_Signer(this: Signer, userAgent: boolean, url: string) {
+export function New_Signer(userAgent: string, url: string): Signer {
 	return {
 		userAgent,
 		url,
 		init,
 	};
-	async function init() {
-		if (!this.browser()) {
+	async function init(this: Signer) {
+		if (!this.browser) {
 			this.browser = await chromium.launch();
 		}
 	}
