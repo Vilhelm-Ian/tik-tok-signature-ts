@@ -1,0 +1,29 @@
+{
+  "name": "tiktok-signature",
+  "version": "1.0.0",
+  "description": "implintation of tik tok signature in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "build": "tsc",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vilhelm-Ian/tik-tok-signature-ts.git"
+  },
+  "keywords": ["tik-tok", "scrapping", "typescript"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vilhelm-Ian/tik-tok-signature-ts/issues"
+  },
+  "homepage": "https://github.com/Vilhelm-Ian/tik-tok-signature-ts#readme",
+  "dependencies": {
+    "jest": "^28.1.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "ts-jest": "^28.0.7"
+  }
+}
